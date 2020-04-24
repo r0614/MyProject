@@ -71,7 +71,7 @@ public class UberEats extends JFrame {
 	    getRestaurant.addActionListener(new ActionListener() {
 	        public void actionPerformed(ActionEvent e) {
 	          try {
-	          rs = stmt.executeQuery("SELECT * FROM UberEats");
+	          rs = stmt.executeQuery("SELECT * FROM UberEats ");
 	            while (rs.next()) 
 	  		  {
 	              if (rs.getString("Rid").equals(
@@ -97,10 +97,10 @@ public class UberEats extends JFrame {
 	        try {
 	          Statement stmt = conn.createStatement();
 	          int i = stmt
-	              .executeUpdate("INSERT INTO UberEats VALUES(" + "'"
+	              .executeUpdate("INSERT INTO UberEats VALUES(" + 
 	                  + RestaurantidText.getText() + "', " + "'"
 	                  + foodmenuText.getText() + "', " + "'" + locationText.getText() +"'," 
-	                  + openclosetimeText.getText() + ", "  + ratingText.getText()
+	                  + openclosetimeText.getText() + "', "  + ratingText.getText()
 	                    + ")" );
 	          errorText.append("\nInserted " + i + " rows successfully");
 	          RestaurantIDList.removeAll();
@@ -176,7 +176,7 @@ public class UberEats extends JFrame {
 	    
 	    JPanel pn2 = new JPanel();
 	    pn2.setLayout(new GridLayout(6, 1));
-	    pn2.add(RestaurantidLabel);
+	    pn2.add(RestaurantidLabel); 
 	    pn2.add(RestaurantidText);
 	    pn2.add(locationLabel);
 	    pn2.add(locationText);
@@ -224,7 +224,7 @@ public class UberEats extends JFrame {
 	    connectToDB();
 	  }
 	  
-	/*  public static void main(String[] args) 
+	 public static void main(String[] args) 
 	  {
 	    UberEats ubr = new UberEats();
 
@@ -235,6 +235,6 @@ public class UberEats extends JFrame {
 	    });
 	    ubr.init();
 	    ubr.GUI();
-	  } */
+	  } 
 
 }
