@@ -21,7 +21,7 @@ public class DeleteAdmin extends Panel
 		{
 			System.err.println("Unable to find and load driver");
 			System.exit(1);
-		}
+		} 
 		connectToDB();
 	}
 
